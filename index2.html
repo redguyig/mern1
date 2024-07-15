@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector </title>
+    <style>
+       *{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* this is a selector that applies to the whole document  */
+       }
+       p{
+            color:red;
+            background-color:antiquewhite;
+            /* this is a normal way to select elements */
+        }
+        #p1{
+            background-color: aqua;
+            /* this is an id selector */
+        }
+        .para2{
+            background-color: blueviolet;
+            /* this is a class selector 
+             */
+        }
+        h1,h2{
+            /* this is a way to select groups of tags at once */
+            color: cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, 
+        non natus in repellat doloribus ex 
+        debitis ducimus quis distinctio deleniti explicabo eveniet molestias 
+        minus cum repellendus quidem cumque alias autem veniam velit dolorem corrupti recusandae.</p>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, aliquam repellendus laborum, 
+        iusto incidunt quasi asperiores maxime odit temporibus beatae nobis? Repellat
+         magnam vel nihil blanditiis beatae atque, quas adipisci, debitis ab, sequi accusamus aliquam dicta ducimus.</p>
+    <!-- id is always unique  
+     while class can be applied to many different elements at the same time -->
+     <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis sit eius. 
+        Tempore officiis nobis natus, quaerat voluptatum sit est debitis rem blanditiis fugit ipsam consectetur
+         deleniti ducimus eligendi modi velit corrupti omnis distinctio praesentium!
+        
+        </p>
+
+    <h1>Hello World</h1>
+    <h2>Hellow World </h2>
+    <a href="index3.html" target="_blank " title="Color">Next page is all about applying colors using CSS</a>
+</body>
+</html>

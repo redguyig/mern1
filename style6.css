@@ -1,0 +1,59 @@
+ul.a{
+    list-style-type: circle;
+}
+ul.b{
+    list-style-type: square;
+}
+ol.c{
+    list-style-type:lower-greek;
+
+}
+ol.d{
+    list-style-type:lower-roman; 
+}
+h1{
+    text-align:center;
+}
+p{
+    text-align: justify;
+}
+#people{
+    font-family: 'Courier New', Courier, monospace;
+    width:100px;
+}
+
+#people td, #people th{
+    border:5px solid red;
+    padding:8px
+
+}
+#people tr:nth-child(even){
+    background-color:#f2f2f2;
+}
+
+#people tr:hover{
+    background-color:aquamarine;
+}
+#people th{
+    padding-top:15px;
+    padding-bottom:12px;
+    text-align:left;
+    background-color: burlywood;
+    color:white;
+}
+a:link{
+    color:green;
+    text-decoration:none;
+}
+a:visited{
+    color:red;
+}
+
+a:hover{
+    color:aquamarine;
+    text-decoration:underline;
+    background-color:black;
+}
+a:active{
+    color:bisque;
+}

@@ -1,0 +1,20 @@
+h1{
+    color:orange;
+    border:3px solid black;
+}
+
+h2{
+    color:rgb(5, 72, 255); 
+    /* end values are 255 */
+    border:2px solid rgb(131, 25, 25);
+}
+h3{
+    color:rgba(34, 205, 218, 0.63);
+    border:1px solid rgba(34, 205, 218, 0.63);
+}
+h4{
+    color:hsl(hue, saturation, lightness)
+    /* this picks the color on the basis of hue saturation and lightness of the shade of the color , this can be 
+    searched online  */
+    /* add an a to the hsl that is make it hsla and it will be the same as rgba that is alpha  */
+}
