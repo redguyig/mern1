@@ -6,6 +6,8 @@ module.exports = {
       fontFamily:{
         playfair: "'Playfair Display',serif",
         comicn: "'Comic Neue', cursive",
+        bruh1:"'Comic Neue',cursive , weight:700, style:normal",
+        
         
 
         
