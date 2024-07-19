@@ -2,7 +2,7 @@ import React from 'react'
 
 const Body = () => {
   return (
-    <div>
+    <div className=' space-y-5'>
       <div className='flex justify-center'>
         <img src="./assets/Blue-Shape.svg" alt="bg1" className="-rotate-[45deg] h-64"/ >
         <img src="./assets/Purple-Shape.svg" alt="bg2" className='absolute -rotate-[30deg] h-64'/ >
@@ -14,11 +14,11 @@ const Body = () => {
         <p className=' font-comicn'>Race across the world,as the BEST racing jockeys from all over the world come to the US and take part in the cross country race and win a Grand Prize</p>
         <form action="" className='flex flex-col gap-3'>
            <input className="rounded-md px-4 py-3 palceholder: text-gray-400 opacity-1"type='email' placeholder='Enter Your Email'/>
-           <button className='rounded-md px-4 py-3 bg-pink-400 hover:bg-pink-600'>Join the RACE </button>
+           <button className='rounded-md px-4 py-3 bg-pink-400 hover:bg-pink-600 w-40'>Join the RACE </button>
         </form>
-        <div className='flex'>
+        <div className='flex gap-2 '>
           <img src="./assets/Checkmark.svg" alt='tick'/>
-          <p>No paralympic racers allowed</p>
+          <p className='font-comicn text-gray-400'>No paralympic racers allowed</p>
         </div>
       </div>
     </div>
