@@ -17,7 +17,7 @@ let a=null;
 console.log(typeof a); //output will be object as null is not a datatype but rather an object
 console.log(a); // this will show the output as null
 
-//5- undefined (kurasu moshoku)
+//5- undefined 
 let z;
 console.log(z);
 console.log(typeof z);
