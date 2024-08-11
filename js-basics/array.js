@@ -9,6 +9,7 @@ for (let i=0;i<arr1.length;i++){
     console.log(arr1[i]+" "+i);
 }
 // alternative method
+console.log("Using forEach");
 arr1.forEach((val,index,array)=>{  //only one argument can also be taken to print but it is a positional argument so the first place is fixef for value , second for index and the third for the array itself
 console.log(val+" "+index+" "+ array);  //the val prints the element while index prints the index and array prints the whole array at once
 });
