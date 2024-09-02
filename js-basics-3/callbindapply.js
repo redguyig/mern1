@@ -18,4 +18,4 @@ f1.call(obj2,20);  //calls fname of obj2 such that the this keyword points towar
 f1.apply(obj2,[20,"male"]);  //apply takes array like input rather than call which can take individual components
 
 var a = f1.bind(obj2,20,"Male");
-console.log(typeof a )
+console.log(typeof a ) //bind creates the variable to a function
