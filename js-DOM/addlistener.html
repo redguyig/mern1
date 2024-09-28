@@ -1,0 +1,36 @@
+<!-- TO ADD LISTENER EVENT -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Listener Event</title>
+    <style>
+        #real{
+            width:400px;
+            height:400px;
+            background-color:aquamarine;
+            border:2px solid blue;
+            border-radius:10px;
+
+        }
+    </style>
+ </head>
+ <body>
+    <div id="real">
+
+
+    </div>
+<button id="boton">
+CLICK ME
+</button>
+ <script>
+    document.getElementById('#boton').addEventListener('click',fun());
+    function fun(){
+        var a=document.querySelector('#real');
+        a.style.backgroundColor='red';
+    }
+    // what I think is is just that it's a cleaner way to write whatever we wrote in previous code except here we can define the event such as a mouse click or keyboard click or such 
+ </script>   
+ </body>
+ </html>

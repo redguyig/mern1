@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <style>
+        #Div1{
+            width:400px;
+            height:400px;
+            background-color:aquamarine;
+            border:2px solid blue;
+            border-radius:10px;
+
+        }
+        #Div2{
+            width:400px;
+            height:400px;
+            background-color:green;
+            border:2px dotted orange;
+            border-radius:5px;
+        }
+        #Big{
+            display:flex;
+            flex-direction:row;
+            
+            flex-basis:auto;
+            flex-grow:0;
+            align-items: flex-start;
+           
+        }
+        button{
+            
+    flex-shrink: 0; /* Prevent shrinking */
+    flex-grow: 0;   /* Prevent growing */
+    width: auto;    /* Let the button take its natural width */
+    height:auto;
+    margin-top:auto;
+
+        }
+    </style>
+</head>
+<body>
+   <div id="Big">
+    <div id="Div2" >
+        
+    </div>
+    <div id="Div1" onmouseover="onMouseover()" onmouseleave="changecolor()">
+   
+    </div>
+    <div>
+        <!-- <button onclick="changecolor()"> Change color</button>  this was to make the box change color upoin clicking the button -->
+        
+    </div>
+    <button onmousedown="changecolorhold()"  onmouseup='changecolorrelease()'>Click and hold</button>
+   </div>
+   
+    <script>
+        function changecolor(){
+            var x= document.querySelector('#Div1');
+            x.style.backgroundColor='aquamarine';
+
+        }
+        function onMouseover(){
+            var x=document.querySelector('#Div1');
+            x.style.backgroundColor='purple';
+        }
+        function changecolorhold(){
+            var y = document.querySelector('#Div2');
+            y.style.backgroundColor='orange';
+        }
+        function changecolorrelease(){
+            var z=document.querySelector('#Div2');
+            z.style.backgroundColor='green';
+        }
+    </script>
+
+</body>
+</html>

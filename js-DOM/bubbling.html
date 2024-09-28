@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding:20px;
+            background-color:darkblue;
+
+        }
+        div{
+            padding:20px;
+            background-color:blue;
+            width:max-content;
+
+        }
+        span{
+            padding:20px;
+            background-color:darkcyan ;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <button>Click me</button>
+        </span>
+    </div>
+    <script>
+        const b=document.getElementsByTagName('body')[0];
+        const d=document.getElementsByTagName('div')[0];
+        const s=document.getElementsByTagName('span')[0];
+        const bu=document.getElementsByTagName('button')[0];
+        // b.addEventListener('click',()=>{
+        //     console.log('Body was clicked');
+        // })
+        // d.addEventListener('click',()=>{
+        //     console.log('Div was clicked');
+        // })
+        // s.addEventListener('click',()=>{
+        //     console.log('Span was clicked');
+        // })
+        // bu.addEventListener('click',(event)=>{
+        //     event.stopPropagation();
+        //     console.log('Button was clicked');
+        // })
+        //upon clicking any element the console.log message for the parent element also appears , now to isolate this we use stoppropogation
+        //now to avoid all this code for the single message we use event delegation 
+
+
+        d.addEventListener('click',()=>{
+            if(event.target.tagName=='BUTTON'){
+                console.log('Button was clicked')
+            }
+            else if(event.target.tagName=='SPAN'){
+                console.log('Span was clicked')
+            }
+        }
+    )
+    </script>
+</body>
+</html>

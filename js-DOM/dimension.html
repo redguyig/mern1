@@ -1,0 +1,32 @@
+<!-- TO ADD LISTENER EVENT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Adding Listener Event</title>
+   <style>
+       #real{
+           width:400px;
+           height:400px;
+           background-color:aquamarine;
+           border:2px solid blue;
+           border-radius:10px;
+
+       }
+   </style>
+</head>
+<body>
+   <div id="real">
+
+
+   </div>
+<button id="boton">
+CLICK ME
+</button>
+<script>
+let a = document.querySelector('div');
+console.log(a.getBoundingClientRect()); //gives properties using .height with it speccifically gives us the height in console
+</script>   
+</body>
+</html>

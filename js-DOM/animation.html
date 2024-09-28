@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Box</title>
+    <style>
+        #container{
+            width:400px;
+            height:400px;
+            background-color: aquamarine;
+            position:relative;
+            border:2px solid red;
+            border-radius:5px;
+            
+            
+            /* display:flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        #inside{
+            height:40px;
+            width:40px;
+            background-color: blueviolet;
+            position:absolute;
+            border:2px solid rgb(255, 166, 0);
+            border-radius:5px;
+        }
+        
+    </style>
+
+</head>
+<body>
+<div id="container">
+    <div id="inside">
+        
+    </div>
+</div>
+<button onclick="moving()">
+CLICK ME 
+</button>
+
+    <script>
+        function moving(){
+            let pos=0;
+            const x= document.getElementById('inside');
+            const id = setInterval(frame,10);
+            function frame(){
+                if (pos==355){
+                    clearInterval(id);
+                }
+                pos++;
+                x.style.top=pos+ 'px';
+                x.style.left=pos+ 'px';
+            }
+        }
+    </script>
+    
+</body>
+</html>

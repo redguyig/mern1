@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Location</title>
+</head>
+<body>
+    <div id="hello"></div>
+    <script>
+        let loc= document.getElementById('hello')
+        loc.innerHTML=window.location.href;
+        loc.innerHTML=window.location.hostname; 
+        loc.innerHTML=window.location.pathname; 
+        loc.innerHTML=window.location.protocol; 
+        loc.innerHTML=window.location.assign('https://google.com'); 
+        
+
+    </script>
+</body>
+</html>
