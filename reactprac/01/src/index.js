@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Data from "./Data"
 import Form from "./Form"
 import Useeffect from "./Useeffect"
+import Fetch from "./Fetch"
+import Multireturn from "./Multireturn"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,8 +16,9 @@ root.render(
     /* <App /> */} 
     {/* <Data/> */}
     {/* {<Form/>} this was for handling multiple use states*/  }
-    {<Useeffect/>}
-    
+    {/* {<Useeffect/>} covered useState and useEffect */}
+    {/* {<Fetch/>} used api to getch data from a site then return it and used use state and stuff to display it*/}
+    <Multireturn/>
   </React.StrictMode>
 );
 
