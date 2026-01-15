@@ -1,0 +1,26 @@
+/** * STUDENT INFERENCES & CONCEPTUAL NOTES 
+ * (Preserved from original messy App.jsx)
+ */
+
+// INFERENCE 1: React vs Manual DOM
+// "Logic: Conditional Rendering (Replaces manual DOM hiding)"
+// Instead of document.getElementById().style.display = 'none', 
+// we use {isCompleted ? <p>✅</p> : <p>⏳</p>}
+
+// INFERENCE 2: Event Handling
+// "Event Handling (Replaces addEventListener)"
+// React uses camelCase props like onClick={() => ...} directly on the element.
+
+// INFERENCE 3: State Persistence (The "Why")
+// "Change your useState to 'Pull' from localStorage if it exists"
+// "Same syntax as earlier... this one is a bit better for understanding since 
+// it doesn't use ternary operators."
+
+// INFERENCE 4: The Logic Gate
+// "B. The Logic Gate: Success: Use saved number / Fallback: Use 0 if empty"
+// This prevents the 'Black Out' crash by ensuring the state never gets a null value.
+
+// INFERENCE 5: The messy ternary vs clear logic
+// "setShowDetails(count > 5 ? count : setCount(count + 1)) 
+// while this works it's a messy one and the setter relies on a counter 
+// which in the longer run and bigger apps is not reliable."

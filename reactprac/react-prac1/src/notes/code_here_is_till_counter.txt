@@ -1,0 +1,133 @@
+// import { useState } from 'react'
+
+// function App() {
+//   // 1. Initializing state (The thing you were learning)
+//   const [currentTopic, setCurrentTopic] = useState("React Basics");
+//   const [isCompleted, setIsCompleted] = useState(false);
+
+//   return (
+//     <div className="container">
+//       <h1>University Roadmap 2026</h1>
+//       <p>Current Focus: <strong>{currentTopic}</strong></p>
+      
+//       {/* 2. Logic: Conditional Rendering (Replaces manual DOM hiding) */}
+//       {isCompleted ? <p>✅ Topic Mastered!</p> : <p>⏳ Learning in progress...</p>}
+
+//       {/* 3. Event Handling (Replaces addEventListener) */}
+
+//       <button onClick={() => setIsCompleted(!isCompleted)}>
+//         Toggle Status
+//       </button>
+//     </div>
+//   )
+// }
+import {useState,useEffect} from 'react'
+import Details from './components/Details.jsx'
+import Counter from './components/Counter.jsx'
+
+function App() {
+  // 1. Define the 'Toggle' state
+  // const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(() => {
+  const saved = localStorage.getItem('detailsVisible');
+  
+  // Logic: Since it's stored as a string, we compare it to the string "true"
+  return saved === 'true'; 
+});
+  // const[count,setCount]=useState(1)
+  // Change your useState to "Pull" from localStorage if it exists
+//   const [count, setCount] = useState(() => {
+//   const saved = localStorage.getItem('userCount');
+//   return saved ? parseInt(saved) : 0; // Convert string back to number
+// });
+const [count, setCount] = useState(() => {
+  // A. The Read
+  const saved = localStorage.getItem('userCount');
+
+  // B. The Logic Gate
+  if (saved !== null) {
+    return parseInt(saved); // C. Success: Use the saved number
+  } else {
+    return 0; // D. Fallback: Use 0 if memory is empty
+  }
+});
+// same syntax and everything as the one used earlier it's just that this one is a bit better when it comes to understanding since it doesn't use ternary operators
+// //const [count, setCount] = useState(() => {
+//   // A. The Read
+//   const saved = localStorage.getItem('userCount');
+
+//   // B. The Logic Gate
+//   if (saved !== null) {
+//     return parseInt(saved); // C. Success: Use the saved number
+//   } else {
+//     return 0; // D. Fallback: Use 0 if memory is empty
+//   }
+// });
+  const handleReset=()=>{
+    setCount(1)
+    setShowDetails(false)
+  
+  }
+  useEffect(()=>{
+    // Logic: Save 'count' as a string in LocalStorage whenever it changes
+    localStorage.setItem('userCount', count);
+  },[count]); // This [count] means: "Run this every time 'count' updates"
+  const handleIncrement = () => {
+  // Logic: If the count is 5, the NEXT click makes it 6 and UNLOCKS the roadmap
+  if (count < 6) {
+    setCount(prev => prev + 1);
+  }
+
+  // Once the count reaches 6 (or more), show the details
+  if (count >= 5) {
+    setShowDetails(true);
+  }
+};
+  return (
+  <>
+  <Counter count={count} onIncrement={handleIncrement}/>
+  <Details isUnlocked={showDetails}/>
+  <button onClick={handleReset}>Reset</button>
+  </>
+//     <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+//       <h1>MERN Roadmap 2026</h1>
+//       <p>Unlock Progress: {count} / 6</p>
+//       {count > 0 && count <= 5 && <p>Powering up... {count} / 6</p>}
+//       {/* 2. The Trigger: Clicking this 'flips' the boolean */}
+//       <button onClick={() =>
+//         {if (count>5){
+//           setShowDetails(!showDetails)
+//         }
+//         else{
+//           setCount(count+1)
+//         }
+//         //  setShowDetails(count>5 ? count:setCount(count+1)) while this one works it's a messy one and the setter which sets the condition true and false relies on a counter
+//         //which in the longer run and bigger apps is not reliable
+
+//       }}> 
+
+        
+//         {showDetails ? "Hide Details" : "Show Details"}
+//       </button>
+//       {/* <button onClick={handleReset} style={{ backgroundColor: '#ff4d4d', color: 'white' }}>
+//          Reset Progress
+//       </button> */}
+//       {(count > 6 || showDetails) && (
+//       <button onClick={handleReset}>Reset</button>)}
+//       {/* 3. The Condition: Using '&&' (Short-circuit evaluation) */}
+//       {showDetails && (
+//         <div style={{ marginTop: '20px', padding: '10px', border: '1px solid #ccc' }}>
+//           <h3>Upcoming Milestones:</h3>
+//           <ul>
+//             <li>Deep dive into useEffect</li>
+//             <li>Connecting to Express.js (Backend)</li>
+//             <li>MongoDB Schema Design</li>
+//           </ul>
+//         </div>
+//       )}
+//     </div>
+//   )
+// }
+  
+)}
+export default App

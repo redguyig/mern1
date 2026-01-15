@@ -13,3 +13,6 @@ console.log(map2);
 
 
 //if variable is iterable use for..of loop rather than for..in 
+// so basically these act like how dictionary works in python also some of the functions in this are 
+console.log (map1.keys())
+console.log(map2.keys())
